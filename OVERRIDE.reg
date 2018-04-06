@@ -1,0 +1,6 @@
+
+[Software\\Wine\\DllOverrides]
+"odbccp32"="native"
+"odbc32"="native"
+"oleaut32"="native"
+"msjet40"="native"
