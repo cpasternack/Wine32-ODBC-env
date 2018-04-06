@@ -4,7 +4,7 @@ echo -e "Installing application wineprefix"
 
 WINE32DIR_SYSTEM="/var/lib/wine32"
 WINE32DIR_USER="~/.wine32"
-WINEPREFIX="$WINE32DIR_SYSTEM/ODBC_ENV" 
+WINEPREFIX="$WINE32DIR_USER/ODBC_ENV" 
 WINEARCH="win32"
 WINEDLLOVERRIDES="odbccp32=n,b;odbc32=n,b;oleaut32=n,b;msjet40=n,b"
 REGFILE="./ODBC_DSN.reg"
@@ -22,9 +22,22 @@ else
 fi
 
 #download latest winetricks (distribution might have old winetricks, with broken links
-wget https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetricks
-chmod +x winetricks
-mv ./winetricks `$USER`/bin
+WGETV=`which wget`
+if [ -z "$WGETV" ]
+then
+	winetricks  --self-update
+else
+	#just grab the newest, store it in users local bin/
+	wget https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetricks
+	chmod +x winetricks
+	if [ -z "`$USER/bin`" ]
+	then
+		mkdir `$HOME`/bin
+	fi
+	mv ./winetricks `$USER`/bin
+	sudo ln -s `$USER`/bin /usr/local/bin/winetricks
+fi
+
 
 if [ ! -z "$WINEPREFIX/`echo $USER`" ]
 then
