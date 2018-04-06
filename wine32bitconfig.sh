@@ -20,6 +20,12 @@ else
 	echo -e "\tConfigures a wine32 prefix with ODBC DSNs specified in file"
 	
 fi
+
+#download latest winetricks (distribution might have old winetricks, with broken links
+wget https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetricks
+chmod +x winetricks
+mv ./winetricks `$USER`/bin
+
 if [ ! -z "$WINEPREFIX/`echo $USER`" ]
 then
 	"$WINEPREFIX/`echo $USER`_ODBC32" $WINEARCH wine wineboot
