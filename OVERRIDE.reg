@@ -1,6 +1,11 @@
-
-[Software\\Wine\\DllOverrides]
-"odbccp32"="native"
-"odbc32"="native"
-"oleaut32"="native"
-"msjet40"="native"
+[HKEY_CURRENT_USER\Software\Wine\DllOverrides]
+"*cscript.exe"="native,builtin"
+"*jscript"="native,builtin"
+"*msxml4"="native,builtin"
+"*odbc32"="native,builtin"
+"*odbccp32"="native,builtin"
+"*oleaut32"="native,builtin"
+"*oledb32"="native,builtin"
+"*scrrun"="native,builtin"
+"*vbscript"="native,builtin"
+"*wscript.exe"="native,builtin"
