@@ -1,0 +1,33 @@
+REGEDIT4
+
+[HKEY_LOCAL_MACHINE\Software\Wow6432Node]
+
+[HKEY_LOCAL_MACHINE\Software\Wow6432Node\ODBC]
+
+[HKEY_LOCAL_MACHINE\Software\Wow6432Node\ODBC\ODBC.INI]
+
+[HKEY_LOCAL_MACHINE\Software\Wow6432Node\ODBC\ODBC.INI\@1_DB]
+"Database"="@1_DB"
+"Description"="@1_DB"
+"Driver"="C:\\Windows\\system32\\SQLSRV32.dll"
+"LastUser"="sa"
+"Server"="DBHOST1"
+
+[HKEY_LOCAL_MACHINE\Software\Wow6432Node\ODBC\ODBC.INI\@2_DB]
+"Database"="@2_DB"
+"Description"="@2_DB"
+"Driver"="C:\\Windows\\system32\\SQLSRV32.dll"
+"LastUser"="sa"
+"Server"="DBHOST2"
+
+[HKEY_LOCAL_MACHINE\Software\Wow6432Node\ODBC\ODBC.INI\@3_DB]
+"Database"="@3_DB"
+"Description"="@3_DB"
+"Driver"="C:\\Windows\\system32\\SQLSRV32.dll"
+"LastUser"="sa"
+"Server"="DBHOST3"
+
+[HKEY_LOCAL_MACHINE\Software\Wow6432Node\ODBC\ODBC.INI\ODBC Data Sources]
+"@1_DB"="SQL Server"
+"@2_DB"="SQL Server"
+"@3_DB"="SQL Server"

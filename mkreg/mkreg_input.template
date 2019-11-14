@@ -1,0 +1,11 @@
+server_name
+user_account
+@@
+database_1
+database_2
+database_n
+@@@
+DSN_description_1
+DSN_description_2
+DSN_description_n
+###

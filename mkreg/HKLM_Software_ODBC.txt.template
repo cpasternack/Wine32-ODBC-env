@@ -1,0 +1,31 @@
+REGEDIT4
+
+[HKEY_LOCAL_MACHINE\Software\ODBC]
+
+[HKEY_LOCAL_MACHINE\Software\ODBC\ODBC.INI]
+
+[HKEY_LOCAL_MACHINE\Software\ODBC\ODBC.INI\ODBC Data Sources]
+"@1"="SQL Server"
+"@2"="SQL Server"
+"@3"="SQL Server"
+
+[HKEY_LOCAL_MACHINE\Software\ODBC\ODBC.INI\@1_Description]
+"Database"="@1"
+"Description"="@1_Description"
+"Driver"="C:\\windows\\system32\\SQLSRV32.dll"
+"LastUser"="sa"
+"Server"="@1_DB"
+
+[HKEY_LOCAL_MACHINE\Software\ODBC\ODBC.INI\@2_Description]
+"Database"="@2"
+"Description"="@2_Description"
+"Driver"="C:\\windows\\system32\\SQLSRV32.dll"
+"LastUser"="sa"
+"Server"="@2_DB"
+
+[HKEY_LOCAL_MACHINE\Software\ODBC\ODBC.INI\@3_Description]
+"Database"="@3"
+"Description"="@3_Description"
+"Driver"="C:\\windows\\system32\\SQLSRV32.dll"
+"LastUser"="sa"
+"Server"="@3_DB"
