@@ -1,9 +1,17 @@
 #!/bin/bash
 
+###################################################################
+#
+#
+#
+#
+###################################################################
+
+
 echo -e "Installing application wineprefix"
 
 WINE32DIR_SYSTEM="/var/lib/wine32"
-WINE32DIR_USER="~/.wine32"
+WINE32DIR_USER="~/wine32"
 WINEPREFIX="$WINE32DIR_USER/ODBC_ENV" 
 WINEARCH="win32"
 WINEDLLOVERRIDES="odbccp32=n,b;odbc32=n,b;oleaut32=n,b;msjet40=n,b"
