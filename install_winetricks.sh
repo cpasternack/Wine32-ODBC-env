@@ -1,17 +1,28 @@
 #!/usr/bin/env bash
-#download latest winetricks (distribution might have old winetricks, with broken links
+
+#
+# 
+#
+
+set -e
+
+# download latest winetricks (distribution might have old winetricks, with broken links)
+
 WGETV=`which wget`
-if [ -z "$WGETV" ]
+# if wget isn't installed, try self update
+if [ -z "${WGETV}" ]
 then
 	winetricks  --self-update
 else
-	if [ -z "${HOME}/bin" ]
+	if [ -d "${HOME}/bin" ]
 	then
-		mkdir ${HOME}/bin
-    #just grab the newest, store it in users local bin/
+    cd ${HOME}/bin
     wget https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetricks
     chmod +x winetricks
-	fi
-	./winetricks ${HOME}/bin
-	#ln -s ${HOME}/bin /usr/local/bin/winetricks
+  else
+		mkdir ${HOME}/bin && cd ${HOME}/bin
+    wget https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetricks
+    chmod +x winetricks
+  fi
 fi
+exit $?
